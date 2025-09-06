@@ -6,28 +6,30 @@ import { Menu } from 'lucide-react';
 
 const Navbar = () => {
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'CSR Partnerships', path: '/csr' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'Home', path: '#home' },
+    { name: 'About Us', path: '#about' },
+    { name: 'Initiatives', path: '#initiatives' },
+    { name: 'Get Involved', path: '#get-involved' },
+    { name: 'Contact', path: '#contact' },
   ];
 
   return (
-    <nav className="bg-punaroday-blue text-punaroday-white p-4 shadow-md">
+    <nav className="sticky top-0 z-50 bg-punaroday-blue text-punaroday-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-punaroday-yellow">
-          Punaroday Foundation
-        </Link>
+        <a href="#home" className="text-2xl font-bold text-punaroday-white">
+          <span className="text-punaroday-orange">Punaroday</span> Foundation Sanstha
+        </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            <Link key={link.name} to={link.path} className="hover:text-punaroday-yellow transition-colors">
+            <a key={link.name} href={link.path} className="hover:text-punaroday-orange transition-colors">
               {link.name}
-            </Link>
+            </a>
           ))}
+          <Button className="bg-punaroday-orange text-punaroday-white hover:bg-orange-600 px-6 py-2 rounded-full font-semibold transition-colors">
+            Donate Now
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
@@ -41,10 +43,13 @@ const Navbar = () => {
             <SheetContent side="right" className="bg-punaroday-blue text-punaroday-white border-none">
               <div className="flex flex-col space-y-4 pt-8">
                 {navLinks.map((link) => (
-                  <Link key={link.name} to={link.path} className="text-xl hover:text-punaroday-yellow transition-colors">
+                  <a key={link.name} href={link.path} className="text-xl hover:text-punaroday-orange transition-colors">
                     {link.name}
-                  </Link>
+                  </a>
                 ))}
+                <Button className="bg-punaroday-orange text-punaroday-white hover:bg-orange-600 px-6 py-2 rounded-full font-semibold transition-colors mt-4">
+                  Donate Now
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

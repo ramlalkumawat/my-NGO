@@ -1,32 +1,36 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-punaroday-blue text-punaroday-white py-20 md:py-32 overflow-hidden">
-      {/* Background pattern/texture - optional */}
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url(/placeholder.svg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+    <section id="home" className="relative h-[70vh] md:h-[85vh] flex items-center justify-center text-punaroday-white overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(https://placehold.co/1920x1080/1E3A8A/FFFFFF/png?text=NGO+Work+Background)' }}
+      >
+        <div className="absolute inset-0 bg-punaroday-blue opacity-70"></div> {/* Dark overlay */}
+      </div>
       
-      <div className="container mx-auto relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-punaroday-yellow">
-          Empowering Rajasthan’s Future through Skills, Startups & Social Impact.
+      <div className="container mx-auto relative z-10 text-center px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Empowering <span className="text-punaroday-orange">Youth</span>, Enriching <span className="text-punaroday-orange">Communities</span>.
         </h1>
         <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
           Punaroday Foundation Sanstha is dedicated to fostering sustainable development
           across women empowerment, youth skill development, education, tourism, health, environment, and sports.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <Link to="/projects">
-            <Button className="bg-punaroday-yellow text-punaroday-blue hover:bg-yellow-400 px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-              Explore Our Projects
+          <a href="#get-involved"> {/* Link to Get Involved section */}
+            <Button className="bg-punaroday-orange text-punaroday-white hover:bg-orange-600 px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+              Donate Now
             </Button>
-          </Link>
-          <Link to="/contact">
+          </a>
+          <a href="#get-involved"> {/* Link to Get Involved section */}
             <Button variant="outline" className="border-2 border-punaroday-white text-punaroday-white hover:bg-punaroday-white hover:text-punaroday-blue px-8 py-6 text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Get Involved
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
