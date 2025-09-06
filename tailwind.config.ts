@@ -62,6 +62,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom Punaroday colors
+        'punaroday-blue': '#1E3A8A',
+        'punaroday-yellow': '#FACC15',
+        'punaroday-white': '#FFFFFF',
       },
       borderRadius: {
         lg: "var(--radius)",
