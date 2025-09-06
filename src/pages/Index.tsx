@@ -2,6 +2,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 import HeroSection from "@/components/HeroSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lightbulb, Users, BookOpen, Globe, Heart, Award } from 'lucide-react';
+import { Button } from "@/components/ui/button"; // Added this import
 
 const Index = () => {
   return (
