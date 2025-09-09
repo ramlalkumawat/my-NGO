@@ -7,6 +7,13 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import Layout from "./components/layout/Layout";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import Programs from "./pages/Programs";
+import GetInvolved from "./pages/GetInvolved";
+import Events from "./pages/Events";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +28,13 @@ const App = () => (
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
-              {/* All content is now on the Index page, other routes are removed */}
+              <Route path="/about" element={<About />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
