@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { DonateModal } from './DonateModal';
 
 const HeroSection = () => {
   return (
@@ -21,11 +22,11 @@ const HeroSection = () => {
           across women empowerment, youth skill development, education, tourism, health, environment, and sports.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="#get-involved">
+          <DonateModal>
             <Button className="bg-orange-500 text-white hover:bg-orange-600 px-8 py-6 text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Donate Now
             </Button>
-          </a>
+          </DonateModal>
           <a href="#get-involved">
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-500 px-8 py-6 text-lg font-semibold rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               Get Involved

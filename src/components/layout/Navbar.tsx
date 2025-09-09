@@ -9,6 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { DonateModal } from '../DonateModal';
+import LazyImage from '../LazyImage';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -40,8 +42,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white text-gray-800 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-gray-800">
-          <span className="text-orange-500">Punaroday</span> Foundation
+        <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-gray-800">
+          <LazyImage src="https://placehold.co/120x50/ffffff/f97316/png?text=Logo" alt="Punaroday Foundation Logo" className="h-12" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -68,9 +70,11 @@ const Navbar = () => {
               </Link>
             )
           ))}
-          <Button className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded-lg font-semibold transition-colors">
-            Donate Now
-          </Button>
+          <DonateModal>
+            <Button className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded-lg font-semibold transition-colors">
+              Donate Now
+            </Button>
+          </DonateModal>
           <Link to="/admin">
             <Button variant="outline" size="icon" title="Admin Panel">
               <LogIn className="h-4 w-4" />
@@ -93,9 +97,11 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
-                <Button className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded-lg font-semibold transition-colors mt-4">
-                  Donate Now
-                </Button>
+                <DonateModal>
+                  <Button className="bg-orange-500 text-white hover:bg-orange-600 px-6 py-2 rounded-lg font-semibold transition-colors mt-4">
+                    Donate Now
+                  </Button>
+                </DonateModal>
                  <Link to="/admin">
                     <Button variant="outline" className="w-full mt-2">
                         Admin Panel
