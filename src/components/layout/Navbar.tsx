@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ChevronDown, LogIn } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -75,11 +75,6 @@ const Navbar = () => {
               Donate Now
             </Button>
           </DonateModal>
-          <Link to="/admin">
-            <Button variant="outline" size="icon" title="Admin Panel">
-              <LogIn className="h-4 w-4" />
-            </Button>
-          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -102,11 +97,6 @@ const Navbar = () => {
                     Donate Now
                   </Button>
                 </DonateModal>
-                 <Link to="/admin">
-                    <Button variant="outline" className="w-full mt-2">
-                        Admin Panel
-                    </Button>
-                </Link>
               </div>
             </SheetContent>
           </Sheet>
