@@ -1,23 +1,16 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import SEO from '../SEO'; // To be created
+import SEO from '../SEO';
 
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, title, description, keywords, ogImage }) => {
+const Layout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-punaroday-white text-gray-800">
-      <SEO title={title} description={description} keywords={keywords} ogImage={ogImage} />
+      <SEO />
       <Navbar />
       <main className="flex-grow">
-        {children}
+        <Outlet />
       </main>
       <Footer />
     </div>
