@@ -62,13 +62,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom Punaroday colors
-        'punaroday-blue': '#1E3A8A', // Dark Blue
-        'punaroday-orange': '#FF7F00', // Vibrant Orange
-        'punaroday-white': '#FFFFFF', // White
-        'punaroday-light-gray': '#F8F8F8', // Light Gray for backgrounds
-        'punaroday-dark-gray': '#333333', // Dark Gray for text
-        'punaroday-black': '#000000', // Black for text/footer
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -86,10 +79,10 @@ export default {
         },
         "accordion-up": {
           from: {
-            height: "var(--radix-accordion-content-height)",
+            height: "0",
           },
           to: {
-            height: "0",
+            height: "var(--radix-accordion-content-height)",
           },
         },
       },

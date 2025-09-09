@@ -8,7 +8,7 @@ import GetInvolvedCTA from "@/components/GetInvolvedCTA";
 
 const Index = () => {
   return (
-    <div className="bg-punaroday-white">
+    <div className="bg-gray-50">
       <HeroSection />
       <ImpactSection />
       <FocusAreasSection />
